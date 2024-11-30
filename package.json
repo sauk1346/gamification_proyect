@@ -1,7 +1,7 @@
 {
+  "homepage": "https://sauk1346.github.io/gamification_proyect",
   "name": "proyecto-mate-html",
   "private": true,
-  "homepage": "https://sauk1346.github.io/gamification_proyect",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
