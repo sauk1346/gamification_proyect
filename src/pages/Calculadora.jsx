@@ -1,6 +1,4 @@
 import React from 'react'
-import GeoGebraComponent from '../components/GeogeBraComponent'
-import { BlockMath } from 'react-katex'
 import CalculadoraUno from '../components/CalculadoraUno'
 
 
