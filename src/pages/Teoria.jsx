@@ -1,9 +1,12 @@
 import React from 'react'
-import { BlockMath } from 'react-katex'
+import { BlockMath, InlineMath } from 'react-katex'
+import LeySeno from '../components/LeySeno'
+import LeyCoseno from '../components/LeyCoseno'
+import FuncionSenoCoseno from '../components/FuncionSenoCoseno'
 
 export default function Teoria() {
   return (
-    <div>
+    <div className='bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6'>
         <section className='pt-6 pb-6'> 
             <h2 className='text-2xl font-bold text-gray-800 mb-4'>
                 Ley del Seno
@@ -18,6 +21,7 @@ export default function Teoria() {
                 <p className='mt-4 text-gray-600'>
                     Donde R es el radio del círculo circunscrito al triángulo.
                 </p>
+                <LeySeno />
             </div>
         </section>
         
@@ -30,36 +34,41 @@ export default function Teoria() {
                     Relaciona un lado de un triángulo con los otros dos lados y el ángulo comprendido:
                 </p>
                 <div className='bg-white p-4 rounded-lg shadow-sm text-center text-xl'>
+                    <BlockMath math="a^2 = b^2 + c^2 - 2bc \cdot \cos(\alpha)" />
+                    <BlockMath math="b^2 = a^2 + c^2 - 2ac \cdot \cos(\beta)" />
                     <BlockMath math="c^2 = a^2 + b^2 - 2ab \cdot \cos(\gamma)" />    
                 </div>
                 <p className='mt-4 text-gray-600'>
                     Esta ley es una generalización del teorema de Pitágoras.
                 </p>
+                <LeyCoseno />
             </div>
         </section>
 
         <section className='pt-6 pb-6'>
             <h2 className='text-2xl font-bold text-gray-800 mb-4'>
-                Ley de la Tangente
+                Funciones Seno y Coseno
             </h2>
             <div className='bg-blue-50 p-6 rounded-lg'>
                 <p className='text-lg mb-4'>
-                    Relaciona 2 lados y ángulos de un triángulo:
+                    Representan oscilaciones y ciclos que se repiten en fenómenos naturales como el sonido, la luz y el movimiento armónico.
                 </p>
                 <div className='bg-white p-4 rounded-lg shadow-sm text-center text-xl'>
-                    <BlockMath math="\frac{a+b}{a-b} = \frac{\tan\left(\frac{\alpha + \beta}{2}\right)}{\tan\left(\frac{\alpha - \beta}{2}\right)}" />    
+                    <BlockMath math="f(x) = a \cdot \sin(b\cdot x + c) + d" />
+                    <BlockMath math="g(x) = a \cdot \cos(b\cdot x + c) + d" />    
                 </div>
-                <p className='mt-4 text-gray-600'>
-                    Esta ley es una generalización del teorema de Pitágoras.
-                </p>
+                <ul className='mt-4 text-gray-600'>
+                    <li><InlineMath math="a:"/> Amplitud</li>
+                    <li><InlineMath math="b:"/> Frecuencia angular</li>
+                    <li><InlineMath math="\frac{b}{2\pi}:"/> Frecuencia</li>
+                    <li><InlineMath math="\frac{c}{b}:"/> Desplazamiento Vertical</li>
+                    <li><InlineMath math="d:"/> Desplazamiento Horizontal</li>
+                    
+                </ul>
+                <FuncionSenoCoseno />
             </div>
         </section>
-        <div className='mt-8 p-4 bg-yellow-50 rounded-lg'>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2"> 💡 Tip de Estudio</h3>
-            <p className='text-gray-700'>
-                Practica con la calculadora interactiva para reforzar estos conceptos. Intenta resolver problemas variando los valores de lados y ángulos.
-            </p>
-        </div>
+        
     </div>
   )
 }
