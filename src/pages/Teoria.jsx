@@ -6,6 +6,7 @@ import FuncionSenoCoseno from '../components/FuncionSenoCoseno'
 
 export default function Teoria() {
   return (
+    
     <div className='bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6'>
         <section className='pt-6 pb-6'> 
             <h2 className='text-2xl font-bold text-gray-800 mb-4'>
