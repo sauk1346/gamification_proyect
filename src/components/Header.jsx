@@ -20,9 +20,9 @@ export default function Header() {
                     </svg>
                     <span className="ml-2 text-2xl font-bold text-gray-800">Trigonautas</span>          
                 </div>
-                <div class="flex items-center space-x-4">
-                    <span class="text-gray-700 font-bold">Nombre_usuario</span>
-                    <div class="flex items-center bg-yellow-100 px-3 py-1 rounded-full">
+                <div className="flex items-center space-x-4">
+                    <span className="text-gray-700 font-bold">Nombre_usuario</span>
+                    <div className="flex items-center bg-yellow-100 px-3 py-1 rounded-full">
                         <svg 
                             xmlns="http://www.w3.org/2000/svg"
                             width="24" 
@@ -30,10 +30,10 @@ export default function Header() {
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor" 
-                            stroke-width="2" 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round" 
-                            class="lucide lucide-trophy w-4 h-4 text-yellow-600 mr-1">
+                            strokeWidth="2" 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            className="lucide lucide-trophy w-4 h-4 text-yellow-600 mr-1">
                             <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
                             <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
                             <path d="M4 22h16"></path>
@@ -41,7 +41,7 @@ export default function Header() {
                             <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
                             <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
                         </svg>
-                        <span class="text-yellow-800 font-medium">0 puntos</span></div></div>
+                        <span className="text-yellow-800 font-medium">0 puntos</span></div></div>
             </div>
         </div>
     </div>
