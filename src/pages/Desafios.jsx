@@ -16,15 +16,15 @@ export default function Desafios() {
   const renderDesafio = () => {
     switch (desafio) {
       case 1:
-        return <Desafio01 />
+        return <Desafio01 />;
       case 2:
-        return <Desafio02 />
+        return <Desafio02 />;
       case 3:
-        return <Desafio03 />
+        return <Desafio03 />;
       case 4:
-        return <Desafio04 />
+        return <Desafio04 />;
       case 5:
-        return <Desafio05 /> 
+        return <Desafio05 />;
       default:
         return <Desafio01 />;
     }
@@ -35,40 +35,21 @@ export default function Desafios() {
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-gray-800">Desafíos Trigonométricos</h2>
         <div className="flex space-x-2">
-          <button
-            className="w-8 h-8 rounded-full flex items-center justify-center bg-indigo-600 text-white"
-            onClick={() => handleClick(1)}
-          >
-            1
-          </button>
-          <button
-            className="w-8 h-8 rounded-full flex items-center justify-center bg-indigo-600 text-white"
-            onClick={() => handleClick(2)}
-          >
-            2
-          </button>
-          <button
-            className="w-8 h-8 rounded-full flex items-center justify-center bg-indigo-600 text-white"
-            onClick={() => handleClick(3)}
-          >
-            3
-          </button>
-          <button
-            className="w-8 h-8 rounded-full flex items-center justify-center bg-indigo-600 text-white"
-            onClick={() => handleClick(4)}
-          >
-            4
-          </button>
-          <button
-            className="w-8 h-8 rounded-full flex items-center justify-center bg-indigo-600 text-white"
-            onClick={() => handleClick(5)}
-          >
-            5
-          </button>
+          {[1, 2, 3, 4, 5].map((numero) => (
+            <button
+              key={numero}
+              className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                desafio === numero ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-600'
+              } `}
+              onClick={() => handleClick(numero)}
+            >
+              {numero}
+            </button>
+          ))}
         </div>
       </div>
       <div className='p-5'>
-      {renderDesafio()} {/* Renderiza el desafío seleccionado */}
+        {renderDesafio()}
       </div>
     </div>
   );

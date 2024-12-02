@@ -1,7 +1,4 @@
 import React from 'react'
-import CirculoUnitario from '../components/CirculoUnitario'
-import OndaSeno from '../components/OndaSeno'
-import OndaCoseno from '../components/OndaCoseno'
 import faro_img from "../assets/faro_barco.png"
 import pagoda_img from "../assets/pagoda.jpeg"
 import puente_img from "../assets/puente.png"

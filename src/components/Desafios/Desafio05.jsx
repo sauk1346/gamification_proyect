@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import desafio05_img from "../../assets/desafio05.png";
+import { useUser } from '../UserContext';
+import ConfettiAnimation from "../ConfettiAnimation";
 
 export default function Desafio05() {
   const [feedback, setFeedback] = useState(null); // Estado para feedback
+  const { increaseScore } = useUser();
+  const [showConfetti, setShowConfetti] = useState(false); // Estado para activar el confeti
 
   // Respuesta correcta
   const correctAnswer = "32°";
@@ -11,8 +15,12 @@ export default function Desafio05() {
   const handleAnswerClick = (selectedAnswer) => {
     if (selectedAnswer === correctAnswer) {
       setFeedback("¡Correcto! El ángulo de elevación es 32°.");
+      increaseScore(100); // Sumar 100 puntos por respuesta correcta
+      setShowConfetti(true); // Activar confeti
+      setTimeout(() => setShowConfetti(false), 2000); // Detener confeti después de 2 segundos
     } else {
       setFeedback("Incorrecto. Inténtalo nuevamente.");
+      increaseScore(-100); // Restar 100 puntos por respuesta incorrecta
     }
   };
 
@@ -59,6 +67,9 @@ export default function Desafio05() {
           </p>
         )}
       </div>
+
+      {/* Mostrar el confeti si la respuesta es correcta */}
+      {showConfetti && <ConfettiAnimation duration={2000} />}
     </div>
   );
 }

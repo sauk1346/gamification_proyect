@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import desafio01_img from "../../assets/desafio01.png";
+import { useUser } from "../UserContext";
+import ConfettiAnimation from "../ConfettiAnimation"; 
 
 export default function Desafio01() {
   const [feedback, setFeedback] = useState(null); // Estado para feedback
-
+  const { increaseScore } = useUser(); // Accede a la función para incrementar el puntaje
+  const [showConfetti, setShowConfetti] = useState(false); // Estado para controlar la animación de confeti
+  
   // Respuesta correcta
   const correctAnswer = "30 metros";
 
@@ -11,8 +15,12 @@ export default function Desafio01() {
   const handleAnswerClick = (selectedAnswer) => {
     if (selectedAnswer === correctAnswer) {
       setFeedback("¡Correcto! La altura del edificio es de 30 metros.");
+      increaseScore(100); // Suma 100 puntos si la respuesta es correcta
+      setShowConfetti(true); // Muestra el confeti
+      setTimeout(() => setShowConfetti(false), 2000); // Detenemos el confeti después de 2 segundos
     } else {
       setFeedback("Incorrecto. Inténtalo nuevamente.");
+      increaseScore(-100);
     }
   };
 
@@ -57,6 +65,9 @@ export default function Desafio01() {
           </p>
         )}
       </div>
+
+      {/* Mostrar el confeti si la respuesta es correcta */}
+      {showConfetti && <ConfettiAnimation duration={2000} />}
     </div>
   );
 }

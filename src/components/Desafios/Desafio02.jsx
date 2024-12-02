@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import puente_img from "../../assets/puente2.jpg";
+import { useUser } from '../UserContext';
+import ConfettiAnimation from "../ConfettiAnimation";
 
 export default function Desafio02() {
   const [feedback, setFeedback] = useState(null); // Estado para el feedback al usuario
-
+  const { increaseScore } = useUser();
+  const [showConfetti, setShowConfetti] = useState(false); // Estado para activar el confeti
+  
   // Respuesta correcta
   const correctAnswer = "86.6 metros";
 
@@ -11,8 +15,12 @@ export default function Desafio02() {
   const handleAnswerClick = (selectedAnswer) => {
     if (selectedAnswer === correctAnswer) {
       setFeedback("¡Correcto! La longitud de los cables es 86.6 metros.");
+      increaseScore(100); // Aumenta 100 puntos
+      setShowConfetti(true); // Activa la animación de confeti
+      setTimeout(() => setShowConfetti(false), 2000); // Detén la animación después de 2 segundos
     } else {
       setFeedback("Incorrecto. Inténtalo nuevamente.");
+      increaseScore(-100); // Resta 100 puntos si la respuesta es incorrecta
     }
   };
 
@@ -57,6 +65,9 @@ export default function Desafio02() {
           </p>
         )}
       </div>
+
+      {/* Mostrar el confeti si la respuesta es correcta */}
+      {showConfetti && <ConfettiAnimation duration={2000} />}
     </div>
   );
 }
