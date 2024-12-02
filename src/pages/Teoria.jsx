@@ -7,7 +7,7 @@ import FuncionSenoCoseno from '../components/FuncionSenoCoseno'
 export default function Teoria() {
   return (
 
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6'>
+    <div className='motion-preset-expand bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6'>
         <section className='pt-6 pb-6'> 
             <h2 className='text-2xl font-bold text-gray-800 mb-4'>
                 Ley del Seno
@@ -16,7 +16,7 @@ export default function Teoria() {
                 <p className='text-lg mb-4'>
                     Establece que en cualquier triángulo la relación entre el seno de un angulo y el lado opuesto es constante:
                 </p>
-                <div className='bg-white p-4 rounded-lg shadow-sm text-center text-sm sm:text-xl'>
+                <div className='motion-preset-bounce bg-white p-4 rounded-lg shadow-sm text-center text-sm sm:text-xl'>
                     <BlockMath math="\frac{a}{\sin(\alpha)} = \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)} = 2R" />    
                 </div>
                 <p className='mt-4 text-gray-600'>

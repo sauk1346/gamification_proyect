@@ -25,7 +25,7 @@ export default function Desafio01() {
   };
 
   return (
-    <div className='bg-white rounded-lg shadow-lg overflow-hidden'>
+    <div className='motion-preset-blur-right bg-white rounded-lg shadow-lg overflow-hidden'>
       <img className='w-full h-64 object-cover' src={desafio01_img} alt="Edificio" />
       <div className='p-6'>
         <h3 className='text-xl font-bold text-gray-800 mb-4'>El Edificio Misterioso</h3>
@@ -35,25 +35,25 @@ export default function Desafio01() {
         </p>
         <div className='grid grid-cols-2 gap-4'>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
             onClick={() => handleAnswerClick("15 metros")}
           >
             15 metros
           </button>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-green-500'
             onClick={() => handleAnswerClick("30 metros")}
           >
             30 metros
           </button>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
             onClick={() => handleAnswerClick("45 metros")}
           >
             45 metros
           </button>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
             onClick={() => handleAnswerClick("60 metros")}
           >
             60 metros

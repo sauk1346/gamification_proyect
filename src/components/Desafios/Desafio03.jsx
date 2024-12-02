@@ -26,7 +26,7 @@ export default function Desafio03() {
   };
 
   return (
-    <div className='bg-white rounded-lg shadow-lg overflow-hidden'>
+    <div className='motion-preset-blur-right bg-white rounded-lg shadow-lg overflow-hidden'>
       <img className='w-full h-64 object-cover' src={tuberias_img} alt="Tuberías" />
       <div className='p-6'>
         <h3 className='text-xl font-bold text-gray-800 mb-4'>Temperatura de una Tubería</h3>
@@ -40,25 +40,25 @@ export default function Desafio03() {
         </p>
         <div className='grid grid-cols-2 gap-4'>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
             onClick={() => handleAnswerClick("Máx: 30°C, Distancia: 0.5 m")}
           >
             Máx: 30°C, Distancia: 0.5 m
           </button>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-green-500'
             onClick={() => handleAnswerClick("Máx: 35°C, Distancia: 0.25 m")}
           >
             Máx: 35°C, Distancia: 0.25 m
           </button>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
             onClick={() => handleAnswerClick("Máx: 25°C, Distancia: 0 m")}
           >
             Máx: 25°C, Distancia: 0 m
           </button>
           <button
-            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'
+            className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
             onClick={() => handleAnswerClick("Máx: 40°C, Distancia: 1 m")}
           >
             Máx: 40°C, Distancia: 1 m

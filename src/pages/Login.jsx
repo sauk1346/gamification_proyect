@@ -20,9 +20,9 @@ export default function Login() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <div className="text-center mb-8">
-            <img src={logo_img}/>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Bienvenido a Trigonautas</h1>
-            <p className="text-gray-600">Ingresa tu nombre para comenzar la aventura</p>
+            <img className="motion-translate-y-loop-[2%] motion-duration-2000" src={logo_img}/>
+            <h1 className="motion-preset-blur-right text-3xl font-bold text-gray-900 mb-2">Bienvenido a Trigonautas</h1>
+            <p className="motion-preset-focus text-gray-600">Ingresa tu nombre para comenzar la aventura</p>
         </div>
         <form onSubmit={handleLogin} className="space-y-4">
           <div>

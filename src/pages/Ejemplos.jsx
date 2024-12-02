@@ -7,7 +7,7 @@ import { BlockMath } from 'react-katex'
 export default function Ejemplos() {
   return (
     
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6'>
+    <div className='motion-preset-expand bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6'>
       <div className='space-y-8'>
         <h2 className='text-2xl font-bold text-gray-800 mb-6'>Ejemplos Prácticos</h2>
         

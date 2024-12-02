@@ -31,7 +31,7 @@ export default function Desafios() {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6">
+    <div className="motion-preset-expand bg-white rounded-xl shadow-lg overflow-hidden mb-8 p-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-gray-800">Desafíos Trigonométricos</h2>
         <div className="flex space-x-2">
