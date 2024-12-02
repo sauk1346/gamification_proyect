@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 export default function Navbar() {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
-      <div className="flex border-b">
+      <div className="flex flex-col sm:flex-row border-b">
         <NavLink
           to="teoria"
           className={({ isActive }) =>

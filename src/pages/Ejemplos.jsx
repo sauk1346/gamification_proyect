@@ -30,8 +30,10 @@ export default function Ejemplos() {
                 <div>
                   <h4 className='font-semibold text-gray-700 mb-2'>Solución:</h4>
                   <p className='text-gray-600'>Usando definición de Tangente</p>
-                  <BlockMath math="distancia = \frac{altura}{\tan(30°)} = \frac{50}{0.577} "/>
-                  <BlockMath math="distancia = 86.6\;metros"/>
+                  <div className='text-sm sm:text-base'>
+                    <BlockMath math="distancia = \frac{altura}{\tan(30°)} = \frac{50}{0.577} "/>
+                    <BlockMath math="distancia = 86.6\;metros"/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -52,9 +54,10 @@ export default function Ejemplos() {
                 <div>
                   <h4 className='font-semibold text-gray-700 mb-2'>Solución:</h4>
                   <p className='text-gray-600'>Usando definición de Seno</p>
-                  <BlockMath math="distancia = \frac{20}{\sin(75°)}"/>
-                  <BlockMath math="distancia = 20.7\; metros"/>
-
+                  <div className='text-sm sm:text-base'>
+                    <BlockMath math="distancia = \frac{20}{\sin(75°)}"/>
+                    <BlockMath math="distancia = 20.7\; metros"/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,9 +81,11 @@ export default function Ejemplos() {
                   <p className='text-gray-600'>
                     Usando la Ley del Coseno
                   </p>
-                  <BlockMath math="100^2 = 60^2 + 60^2 - 2\cdot 60\cdot 60\cdot \cos(\alpha)"/>
-                  <BlockMath math="cos(\alpha) = \frac{100^2 - 2\cdot 60^2}{2\cdot 60^2}"/>
-                  <BlockMath math="\alpha = cos^{-1}\left(\frac{100^2 - 2\cdot 60^2}{2\cdot 60^2}\right) = 56.4°"/>
+                  <div className='text-sm sm:text-base'>
+                    <BlockMath math="100^2 = 60^2 + 60^2 - 2\cdot 60\cdot 60\cdot \cos(\alpha)"/>
+                    <BlockMath math="cos(\alpha) = \frac{100^2 - 2\cdot 60^2}{2\cdot 60^2}"/>
+                    <BlockMath math="\alpha = cos^{-1}\left(\frac{100^2 - 2\cdot 60^2}{2\cdot 60^2}\right) = 56.4°"/>
+                  </div>
                 </div>
               </div>
             </div>
