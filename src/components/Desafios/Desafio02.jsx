@@ -9,12 +9,12 @@ export default function Desafio02() {
   const [showConfetti, setShowConfetti] = useState(false); // Estado para activar el confeti
   
   // Respuesta correcta
-  const correctAnswer = "86.6 metros";
+  const correctAnswer = "57.74 metros";
 
   // Manejar el clic en los botones de las alternativas
   const handleAnswerClick = (selectedAnswer) => {
     if (selectedAnswer === correctAnswer) {
-      setFeedback("¡Correcto! La longitud de los cables es 86.6 metros.");
+      setFeedback("¡Correcto! La longitud de los cables es 57.74 metros.");
       increaseScore(100); // Aumenta 100 puntos
       setShowConfetti(true); // Activa la animación de confeti
       setTimeout(() => setShowConfetti(false), 2000); // Detén la animación después de 2 segundos
@@ -54,7 +54,7 @@ export default function Desafio02() {
           </button>
           <button
             className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-green-500'
-            onClick={() => handleAnswerClick("86.6 metros")}
+            onClick={() => handleAnswerClick("57.74 metros")}
           >
             86.6 metros
           </button>
