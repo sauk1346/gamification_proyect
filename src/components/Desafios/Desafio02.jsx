@@ -56,7 +56,7 @@ export default function Desafio02() {
             className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-green-500'
             onClick={() => handleAnswerClick("57.74 metros")}
           >
-            86.6 metros
+            57.74 metros
           </button>
         </div>
         {feedback && (

@@ -9,12 +9,12 @@ export default function Desafio04() {
   const [showConfetti, setShowConfetti] = useState(false); // Estado para activar el confeti
   
   // Respuesta correcta
-  const correctAnswer = "12.6 m";
+  const correctAnswer = "13.62 m";
 
   // Manejar el clic en los botones de las alternativas
   const handleAnswerClick = (selectedAnswer) => {
     if (selectedAnswer === correctAnswer) {
-      setFeedback("¡Correcto! La altura de la torre es 12.6 m.");
+      setFeedback("¡Correcto! La altura de la torre es 13.62 m.");
       increaseScore(100); // Aumenta 100 puntos
       setShowConfetti(true); // Activa la animación de confeti
       setTimeout(() => setShowConfetti(false), 2000); // Detén la animación después de 2 segundos
@@ -36,15 +36,15 @@ export default function Desafio04() {
         <div className='grid grid-cols-2 gap-4'>
           <button
             className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
-            onClick={() => handleAnswerClick("10.5 m")}
+            onClick={() => handleAnswerClick("10.51 m")}
           >
-            10.5 m
+            10.51 m
           </button>
           <button
             className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-green-500'
-            onClick={() => handleAnswerClick("12.6 m")}
+            onClick={() => handleAnswerClick("13.62 m")}
           >
-            12.6 m
+            13.62 m
           </button>
           <button
             className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
@@ -54,9 +54,9 @@ export default function Desafio04() {
           </button>
           <button
             className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 active:bg-red-500'
-            onClick={() => handleAnswerClick("13.2 m")}
+            onClick={() => handleAnswerClick("15.52 m")}
           >
-            13.2 m
+            13.52 m
           </button>
         </div>
         {feedback && (
