@@ -62,8 +62,8 @@ export default function Teoria() {
                     <li><InlineMath math="a:"/> Amplitud</li>
                     <li><InlineMath math="b:"/> Frecuencia angular</li>
                     <li><InlineMath math="\frac{b}{2\pi}:"/> Frecuencia</li>
-                    <li><InlineMath math="\frac{c}{b}:"/> Desplazamiento Vertical</li>
-                    <li><InlineMath math="d:"/> Desplazamiento Horizontal</li>
+                    <li><InlineMath math="\frac{c}{b}:"/> Desplazamiento Horizontal</li>
+                    <li><InlineMath math="d:"/> Desplazamiento Vertical</li>
                     
                 </ul>
                 <FuncionSenoCoseno />
